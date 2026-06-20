@@ -170,8 +170,10 @@ const TECH = [
 ];
 
 const EXPERIENCE = [
-  { date: 'Jan 2024 — Present', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
-    points: ['Building AI productivity & invoicing apps (Invoice Matrix, Paraphrase AI, Note Genie) for iOS with Flutter & Firebase.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
+  { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
+    points: ['Building the SDS Manager mobile app with Flutter — offline-first access to Safety Data Sheet libraries, barcode/QR scanning and chemical-safety workflows for field teams.', 'Shipping cross-platform features to iOS & Android, bringing the web platform\'s SDS management capabilities to mobile.'] },
+  { date: 'Jan 2024 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
+    points: ['Built AI productivity & invoicing apps (Invoice Matrix, Paraphrase AI, Note Genie) for iOS with Flutter & Firebase.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',
     points: ['Built 2 ed-tech apps from scratch (Ostad & Quran Shikkha) serving 20,000+ learners.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.'] },
   { date: 'Apr 2021 — Mar 2022', role: 'Flutter Developer', company: 'TechAByte Solutions',
@@ -414,8 +416,9 @@ function initCounters() {
 function initTyped() {
   const node = document.getElementById('typed');
   if (REDUCE_MOTION || typeof Typed === 'undefined') { node.textContent = 'Flutter Developer.'; return; }
+  // headline: Flutter-Developer-led
   new Typed('#typed', {
-    strings: ['Senior Software Engineer.', 'Flutter Developer.', 'Cross-Platform App Developer.', 'Mobile App Specialist.', 'Problem Solver.'],
+    strings: ['Flutter Developer.', 'Software Engineer.', 'Cross-Platform App Developer.', 'Mobile App Specialist.', 'Problem Solver.'],
     typeSpeed: 70, backSpeed: 38, backDelay: 1600, startDelay: 400, loop: true, smartBackspace: true,
   });
 }
