@@ -137,8 +137,8 @@ const SKILLS = {
 };
 
 const TECH = [
-  { img: 'assets/tech/flutter.svg',          name: 'Flutter',      d: 'Primary toolkit' },
-  { img: 'assets/tech/dart.svg',             name: 'Dart',         d: 'Core language' },
+  { img: 'assets/tech/flutter.png',          name: 'Flutter',      d: 'Primary toolkit' },
+  { img: 'assets/tech/dart.png',             name: 'Dart',         d: 'Core language' },
   { i: 'fa-solid fa-fire',      c: '#ffca28', name: 'Firebase',     d: 'Backend & auth' },
   { i: 'fa-brands fa-react',    c: '#61dafb', name: 'React Native', d: 'Cross-platform' },
   { i: 'fa-brands fa-swift',    c: '#f05138', name: 'Swift',        d: 'Native iOS' },
@@ -413,18 +413,18 @@ function initParticles() {
   if (REDUCE_MOTION || typeof particlesJS === 'undefined') return;
   particlesJS('particles', {
     particles: {
-      number: { value: 60, density: { enable: true, value_area: 900 } },
+      number: { value: 130, density: { enable: true, value_area: 800 } },
       color: { value: ['#f5b301', '#ffcb45', '#ffffff'] },
       shape: { type: 'circle' },
-      opacity: { value: 0.45, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.1 } },
+      opacity: { value: 0.5, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.1 } },
       size: { value: 2.6, random: true },
-      line_linked: { enable: true, distance: 140, color: '#f5b301', opacity: 0.18, width: 1 },
-      move: { enable: true, speed: 1.1, direction: 'none', random: true, out_mode: 'out' },
+      line_linked: { enable: true, distance: 120, color: '#f5b301', opacity: 0.22, width: 1 },
+      move: { enable: true, speed: 1.2, direction: 'none', random: true, out_mode: 'out' },
     },
     interactivity: {
       detect_on: 'window',
       events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
-      modes: { grab: { distance: 160, line_linked: { opacity: 0.4 } }, push: { particles_nb: 3 } },
+      modes: { grab: { distance: 200, line_linked: { opacity: 0.6 } }, push: { particles_nb: 4 } },
     },
     retina_detect: true,
   });
