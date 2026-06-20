@@ -131,7 +131,7 @@ const PROJECTS = [
 ];
 
 const SKILLS = {
-  lang:   ['Dart', 'Flutter', 'React Native', 'JavaScript', 'TypeScript', 'Swift', 'Java', 'Python'],
+  lang:   ['Dart', 'Flutter', 'React Native', 'TypeScript', 'Swift', 'Java', 'Python'],
   mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux'],
   data:   ['Firebase', 'Supabase', 'SQLite', 'Drift', 'Hive', 'MongoDB'],
   tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git'],
