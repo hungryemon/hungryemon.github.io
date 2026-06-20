@@ -13,7 +13,7 @@ const PROJECTS = [
     slug: 'sds-manager', name: 'SDS Manager', type: 'apps', featured: true,
     cat: 'Productivity · Enterprise', rating: '5.0',
     tagline: 'Offline-first SDS access for field teams',
-    desc: 'Mobile companion for SDS Manager (Oslo). Gives field teams full offline access to their Safety Data Sheet library — barcode/QR scanning, instant first-aid & hazard info — even with zero connectivity.',
+    desc: 'Mobile companion for SDS Manager. Gives field teams full offline access to their Safety Data Sheet library — barcode/QR scanning, instant first-aid & hazard info — even with zero connectivity.',
     tech: ['Flutter', 'Dart', 'Offline Sync', 'QR / Barcode', 'REST'],
     shots: ['shot-1.webp','shot-2.webp','shot-3.webp','shot-4.webp','shot-5.webp','shot-6.webp','play-shot-1.webp','play-shot-2.webp','play-shot-3.webp','play-shot-4.webp','play-shot-5.webp','play-shot-6.webp'],
     primary: 'play-shot-2.webp',
@@ -106,15 +106,8 @@ const PROJECTS = [
     tagline: 'Cross-platform movie & TV browser',
     desc: 'A Flutter app for discovering movies & TV series via the TMDB API — showcasing GetX for state, routing and DI across mobile, tablet and web, with light/dark themes and onboarding.',
     tech: ['Flutter', 'Dart', 'GetX', 'TMDB API', 'Responsive'],
-    code: [
-      "<span class='kw'>class</span> <span class='fn'>MovieController</span> <span class='kw'>extends</span> GetxController {",
-      "  <span class='kw'>final</span> movies = <span class='fn'>RxList</span>&lt;Movie&gt;([]);",
-      "  <span class='fn'>fetchTrending</span>() <span class='kw'>async</span> {",
-      "    <span class='kw'>final</span> res = <span class='kw'>await</span> tmdb.<span class='fn'>get</span>(<span class='str'>'/trending'</span>);",
-      "    movies.<span class='fn'>assignAll</span>(res.data);",
-      "  }",
-      "}",
-    ],
+    shots: ['shot-1.webp', 'shot-2.webp', 'shot-3.webp', 'shot-4.webp', 'shot-5.webp'],
+    primary: 'shot-1.webp',
     links: { github: 'https://github.com/hungryemon/watcher' },
   },
   {
@@ -123,14 +116,7 @@ const PROJECTS = [
     tagline: 'Flutter + GetX task manager',
     desc: 'A clean cross-platform to-do app built with Flutter and the GetX framework — add tasks, toggle completion — with integration tests covering the core flows.',
     tech: ['Flutter', 'Dart', 'GetX', 'Integration Tests'],
-    code: [
-      "<span class='cm'>// add & toggle tasks reactively</span>",
-      "<span class='kw'>void</span> <span class='fn'>addTask</span>(String title) {",
-      "  todos.<span class='fn'>add</span>(<span class='fn'>Todo</span>(title: title));",
-      "}",
-      "<span class='kw'>void</span> <span class='fn'>toggle</span>(<span class='kw'>int</span> i) =&gt;",
-      "  todos[i].done = !todos[i].done;",
-    ],
+    cover: 'cover.webp',
     links: { github: 'https://github.com/hungryemon/todo_app' },
   },
   {
@@ -139,26 +125,20 @@ const PROJECTS = [
     tagline: 'Air-quality lookup by US zip code',
     desc: 'A Django web app that looks up real-time air quality by US zip code via the AirNow API, mapping AQI categories to human-readable labels and colour codes.',
     tech: ['Python', 'Django', 'AirNow API', 'requests'],
-    code: [
-      "<span class='kw'>def</span> <span class='fn'>lookup</span>(request):",
-      "    zip = request.POST[<span class='str'>'zip'</span>]",
-      "    r = requests.<span class='fn'>get</span>(AIRNOW, params={...})",
-      "    aqi = <span class='fn'>categorize</span>(r.<span class='fn'>json</span>())",
-      "    <span class='kw'>return</span> <span class='fn'>render</span>(request, <span class='str'>'home.html'</span>, aqi)",
-    ],
+    cover: 'cover.webp',
     links: { github: 'https://github.com/hungryemon/djangoweather' },
   },
 ];
 
 const SKILLS = {
   lang:   ['Dart', 'Flutter', 'JavaScript', 'TypeScript', 'Swift', 'Java', 'Python'],
-  mobile: ['React Native', 'BLoC', 'GetX', 'Provider', 'Firebase', 'Offline-First', 'REST APIs'],
+  mobile: ['React Native', 'BLoC', 'GetX', 'Riverpod', 'Provider', 'Firebase', 'Offline-First', 'REST APIs'],
   tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git'],
 };
 
 const TECH = [
-  { i: 'fa-brands fa-flutter',  c: '#54c5f8', name: 'Flutter',      d: 'Primary toolkit' },
-  { i: 'fa-solid fa-bullseye',  c: '#0175c2', name: 'Dart',         d: 'Core language' },
+  { img: 'assets/tech/flutter.svg',          name: 'Flutter',      d: 'Primary toolkit' },
+  { img: 'assets/tech/dart.svg',             name: 'Dart',         d: 'Core language' },
   { i: 'fa-solid fa-fire',      c: '#ffca28', name: 'Firebase',     d: 'Backend & auth' },
   { i: 'fa-brands fa-react',    c: '#61dafb', name: 'React Native', d: 'Cross-platform' },
   { i: 'fa-brands fa-swift',    c: '#f05138', name: 'Swift',        d: 'Native iOS' },
@@ -201,19 +181,20 @@ function renderProjects() {
   const grid = document.getElementById('projectsGrid');
   grid.innerHTML = '';
   PROJECTS.forEach(p => {
-    const isOss = p.type === 'oss';
     const primary = p.primary || (p.shots && p.shots[0]);
-    const media = isOss
-      ? `<div class="card-code">
-           <div class="code-bar"><i></i><i></i><i></i></div>
-           <pre class="code-lines">${p.code.join('\n')}</pre>
-         </div>`
-      : `<div class="card-media" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
-           <img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />
+    let media;
+    if (p.shots) {
+      media = `<div class="card-media" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
+           ${p.type === 'apps' ? `<img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />` : `<span class="card-badge"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`}
            ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}</span>` : ''}
            <img class="shot" src="${ASSET(p.slug, primary)}" alt="${p.name} screenshot" loading="lazy" />
            <div class="card-gallery-hint"><span><i aria-hidden="true" class="fa-solid fa-images"></i> View Gallery</span></div>
          </div>`;
+    } else {
+      media = `<div class="card-cover">
+           <img src="${ASSET(p.slug, p.cover)}" alt="${p.name} cover" loading="lazy" />
+         </div>`;
+    }
     const card = el(`
       <article class="project-card" data-type="${p.type}" data-featured="${!!p.featured}">
         ${media}
@@ -251,12 +232,14 @@ function renderSkills() {
   document.getElementById('chipsMobile').innerHTML = chips(SKILLS.mobile);
   document.getElementById('chipsTools').innerHTML = chips(SKILLS.tools);
   const car = document.getElementById('techCarousel');
-  car.innerHTML = TECH.map(t => `
-    <div class="tech-card">
-      <div class="tech-icon" style="color:${t.c}"><i class="${t.i}"></i></div>
-      <h4>${t.name}</h4>
-      <p>${t.d}</p>
-    </div>`).join('');
+  const cardHtml = (t, dup) => {
+    const visual = t.img
+      ? `<img class="tech-img" src="${t.img}" alt="${t.name} logo" width="44" height="44" loading="lazy" />`
+      : `<i aria-hidden="true" class="${t.i}" style="color:${t.c}"></i>`;
+    return `<div class="tech-card"${dup ? ' aria-hidden="true"' : ''}><div class="tech-icon">${visual}</div><h4>${t.name}</h4><p>${t.d}</p></div>`;
+  };
+  // render twice (flat) for a seamless autoplay loop; duplicates hidden from AT
+  car.innerHTML = TECH.map(t => cardHtml(t, false)).join('') + TECH.map(t => cardHtml(t, true)).join('');
 }
 
 function renderTimeline() {
@@ -279,9 +262,12 @@ function openLightbox(slug, trigger) {
   const p = PROJECTS.find(x => x.slug === slug);
   if (!p || !p.shots) return;
   lbTrigger = trigger || document.activeElement;
+  const head = p.type === 'apps'
+    ? `<img src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" />`
+    : `<span class="lb-glyph"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`;
   lbContent.innerHTML = `
     <div class="lb-head">
-      <img src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" />
+      ${head}
       <div>
         <span class="lb-cat">${p.cat}</span>
         <h3>${p.name}</h3>
@@ -436,12 +422,30 @@ function initParticles() {
       move: { enable: true, speed: 1.1, direction: 'none', random: true, out_mode: 'out' },
     },
     interactivity: {
-      detect_on: 'canvas',
+      detect_on: 'window',
       events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
       modes: { grab: { distance: 160, line_linked: { opacity: 0.4 } }, push: { particles_nb: 3 } },
     },
     retina_detect: true,
   });
+}
+
+function initTechAutoplay() {
+  const car = document.getElementById('techCarousel');
+  if (!car || REDUCE_MOTION) return;
+  let paused = false, last = 0;
+  const half = () => car.scrollWidth / 2;
+  ['pointerenter', 'focusin', 'touchstart'].forEach(e => car.addEventListener(e, () => { paused = true; }, { passive: true }));
+  ['pointerleave', 'focusout', 'touchend'].forEach(e => car.addEventListener(e, () => { paused = false; }, { passive: true }));
+  const step = now => {
+    const dt = last ? now - last : 16; last = now;
+    if (!paused) {
+      car.scrollLeft += dt * 0.045; // ~45px/s
+      if (car.scrollLeft >= half()) car.scrollLeft -= half();
+    }
+    requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
 function initLogoEmoji() {
@@ -466,6 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initReveal();
   initCounters();
+  initTechAutoplay();
   initLogoEmoji();
 
   document.getElementById('filterBar').addEventListener('click', e => {
