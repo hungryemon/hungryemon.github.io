@@ -133,6 +133,7 @@ const PROJECTS = [
 const SKILLS = {
   lang:   ['Dart', 'Flutter', 'React Native', 'JavaScript', 'TypeScript', 'Swift', 'Java', 'Python'],
   mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux'],
+  data:   ['Firebase', 'Supabase', 'SQLite', 'Drift', 'Hive', 'MongoDB'],
   tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git'],
 };
 
@@ -231,6 +232,7 @@ function applyFilter(filter) {
 function renderSkills() {
   document.getElementById('chipsLang').innerHTML = chips(SKILLS.lang);
   document.getElementById('chipsMobile').innerHTML = chips(SKILLS.mobile);
+  document.getElementById('chipsData').innerHTML = chips(SKILLS.data);
   document.getElementById('chipsTools').innerHTML = chips(SKILLS.tools);
   const car = document.getElementById('techCarousel');
   const cardHtml = (t, dup) => {
