@@ -153,7 +153,7 @@ const EXPERIENCE = [
   { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
     points: ['Building the SDS Manager mobile app with Flutter — offline-first access to Safety Data Sheet libraries, barcode/QR scanning and chemical-safety workflows for field teams.', 'Shipping cross-platform features to iOS & Android, bringing the web platform\'s SDS management capabilities to mobile.'] },
   { date: 'Jan 2024 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
-    points: ['Built AI productivity & invoicing apps (Invoice Matrix, Paraphrase AI, Note Genie) for iOS with Flutter & Firebase.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
+    points: ['Built AI productivity & invoicing apps for iOS — Invoice Matrix in Flutter, Paraphrase AI & Note Genie in React Native — all backed by Firebase.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',
     points: ['Built 2 ed-tech apps from scratch (Ostad & Quran Shikkha) serving 20,000+ learners.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.'] },
   { date: 'Apr 2021 — Mar 2022', role: 'Flutter Developer', company: 'TechAByte Solutions',
