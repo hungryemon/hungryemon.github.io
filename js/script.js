@@ -53,7 +53,7 @@ const PROJECTS = [
     desc: "Multi-platform live-learning app for Bangladesh's leading ed-tech bootcamp — real-time streamed classes, a task-based curriculum, mentor feedback and job-placement tools. Built from scratch, serving 20,000+ learners across iOS, Android, macOS, Windows & Linux.",
     tech: ['Flutter', 'Dart', 'Live Streaming', 'GetX', 'Mixpanel', 'Sentry'],
     shots: ['shot-1.webp','shot-2.webp','shot-3.webp','shot-4.webp','shot-5.webp','shot-6.webp'],
-    links: { appstore: 'https://apps.apple.com/us/app/ostad-app/id6446163017', play: 'https://play.google.com/store/apps/details?id=com.ostad.app', web: 'https://ostad.app' },
+    links: { appstore: 'https://apps.apple.com/us/app/ostad-app/id6446163017', play: 'https://play.google.com/store/apps/details?id=com.ostad.app', web: 'https://ostad.app', windows: 'https://cutt.ly/Fr3QsjFo' },
   },
   {
     slug: 'quran-shikkha', name: 'Quran Shikkha', type: 'apps',
@@ -168,11 +168,12 @@ const EXPERIENCE = [
 function el(html) { const t = document.createElement('template'); t.innerHTML = html.trim(); return t.content.firstElementChild; }
 function chips(arr) { return arr.map(s => `<span class="chip">${s}</span>`).join(''); }
 
-function linkButtons(links, featured) {
+function linkButtons(links) {
   const out = [];
-  if (links.appstore) out.push(`<a class="${featured ? 'primary' : ''}" href="${links.appstore}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-app-store-ios"></i> App Store</a>`);
+  if (links.appstore) out.push(`<a href="${links.appstore}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-app-store-ios"></i> App Store</a>`);
   if (links.play) out.push(`<a href="${links.play}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-google-play"></i> Google Play</a>`);
   if (links.web) out.push(`<a href="${links.web}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-solid fa-globe"></i> Web</a>`);
+  if (links.windows) out.push(`<a href="${links.windows}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-windows"></i> Windows</a>`);
   if (links.github) out.push(`<a class="primary" href="${links.github}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-github"></i> Source</a>`);
   return out.join('');
 }
@@ -204,7 +205,7 @@ function renderProjects() {
           <p class="card-tagline">${p.tagline}</p>
           <p class="card-desc">${p.desc}</p>
           <div class="card-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
-          <div class="card-links">${linkButtons(p.links, p.featured)}</div>
+          <div class="card-links">${linkButtons(p.links)}</div>
         </div>
       </article>`);
     grid.appendChild(card);
@@ -279,7 +280,7 @@ function openLightbox(slug, trigger) {
         ${p.shots.map(s => `<img src="${ASSET(p.slug, s)}" alt="${p.name} screenshot" loading="lazy" />`).join('')}
       </div>
     </div>
-    <div class="lb-links card-links">${linkButtons(p.links, true)}</div>`;
+    <div class="lb-links card-links">${linkButtons(p.links)}</div>`;
   lb.classList.add('open');
   lb.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
