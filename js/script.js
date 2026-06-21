@@ -188,7 +188,7 @@ function renderProjects() {
     if (p.shots) {
       media = `<div class="card-media" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
            ${p.type === 'apps' ? `<img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />` : `<span class="card-badge"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`}
-           ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}${p.reviews >= 10 ? ` (${p.reviews})` : ''}</span>` : ''}
+           ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}</span>` : ''}
            <img class="shot" src="${ASSET(p.slug, primary)}" alt="${p.name} screenshot" loading="lazy" />
            <div class="card-gallery-hint"><span><i aria-hidden="true" class="fa-solid fa-images"></i> View Gallery</span></div>
          </div>`;
