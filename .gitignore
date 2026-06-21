@@ -1,2 +1,5 @@
 .DS_Store
 node_modules/
+
+# Local (Bangladesh) resume — keep off git
+assets/resume/Md_Shahed_Uddin_Emon_Resume_BD.pdf
