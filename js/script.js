@@ -11,7 +11,7 @@ const ASSET = (slug, file) => `assets/projects/${slug}/${file}`;
 const PROJECTS = [
   {
     slug: 'sds-manager', name: 'SDS Manager', type: 'apps', featured: true,
-    cat: 'Productivity · Enterprise', rating: '5.0',
+    cat: 'Productivity · Enterprise', rating: '5.0', reviews: 5,
     tagline: 'Offline-first SDS access for field teams',
     desc: 'Mobile companion for SDS Manager. Gives field teams full offline access to their Safety Data Sheet library — barcode/QR scanning, instant first-aid & hazard info — even with zero connectivity.',
     tech: ['Flutter', 'Dart', 'Riverpod', 'Offline Sync', 'QR / Barcode'],
@@ -21,7 +21,7 @@ const PROJECTS = [
   },
   {
     slug: 'invoice-matrix', name: 'Invoice Matrix', type: 'apps', featured: true,
-    cat: 'Business · Finance', rating: '4.4',
+    cat: 'Business · Finance', rating: '4.4', reviews: 14,
     tagline: 'Professional PDF invoices in minutes',
     desc: 'Invoicing & billing app for freelancers and small businesses — create polished PDF invoices, track billing history, automate recurring invoices, get overdue alerts, with secure cloud storage.',
     tech: ['Flutter', 'Dart', 'Firebase', 'PDF Gen', 'RevenueCat'],
@@ -30,7 +30,7 @@ const PROJECTS = [
   },
   {
     slug: 'paraphrase-ai', name: 'Paraphrase AI', type: 'apps', featured: true,
-    cat: 'Productivity · AI', rating: '4.3',
+    cat: 'Productivity · AI', rating: '4.3', reviews: 29,
     tagline: 'AI rewriter & humanizer, 185+ languages',
     desc: 'AI-powered paraphrasing app: reword, rewrite and humanize text with 25+ modes across 185+ languages, plus grammar correction and history. Fast, natural-sounding results.',
     tech: ['React Native', 'TypeScript', 'LLM API', 'Firebase', 'RevenueCat'],
@@ -39,7 +39,7 @@ const PROJECTS = [
   },
   {
     slug: 'note-genie', name: 'Note Genie', type: 'apps', featured: true,
-    cat: 'Education · AI', rating: '5.0',
+    cat: 'Education · AI', rating: '5.0', reviews: 1,
     tagline: 'AI note taker: audio, video & text → notes',
     desc: 'Turns lectures, meetings, PDFs and YouTube videos into organized notes, summaries, quizzes and flashcards — with an AI chat that answers questions over your own notes.',
     tech: ['React Native', 'TypeScript', 'AI Transcription', 'Firebase', 'RevenueCat'],
@@ -48,7 +48,7 @@ const PROJECTS = [
   },
   {
     slug: 'ostad', name: 'Ostad', type: 'apps',
-    cat: 'Education · Live Learning', rating: '4.7',
+    cat: 'Education · Live Learning', rating: '4.7', reviews: 450,
     tagline: 'Live skill-development bootcamp platform',
     desc: "Multi-platform live-learning app for Bangladesh's leading ed-tech bootcamp — real-time streamed classes, a task-based curriculum, mentor feedback and job-placement tools. Built from scratch, serving 20,000+ learners across iOS, Android, macOS, Windows & Linux.",
     tech: ['Flutter', 'Dart', 'Live Streaming', 'GetX', 'Mixpanel', 'Sentry'],
@@ -188,7 +188,7 @@ function renderProjects() {
     if (p.shots) {
       media = `<div class="card-media" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
            ${p.type === 'apps' ? `<img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />` : `<span class="card-badge"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`}
-           ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}</span>` : ''}
+           ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}${p.reviews >= 10 ? ` (${p.reviews})` : ''}</span>` : ''}
            <img class="shot" src="${ASSET(p.slug, primary)}" alt="${p.name} screenshot" loading="lazy" />
            <div class="card-gallery-hint"><span><i aria-hidden="true" class="fa-solid fa-images"></i> View Gallery</span></div>
          </div>`;
