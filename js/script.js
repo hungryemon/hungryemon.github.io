@@ -152,7 +152,7 @@ const TECH = [
 
 const EXPERIENCE = [
   { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
-    points: ['Building the SDS Manager mobile app with Flutter — offline-first access to Safety Data Sheet libraries, barcode/QR scanning and chemical-safety workflows for field teams.', 'Collaborate on requirements and own mobile feature delivery end-to-end — shipping cross-platform releases to iOS & Android and bringing the web platform\'s SDS management to mobile.'] },
+    points: ['Lead a team of 2 Flutter developers, owning mobile delivery end-to-end (requirements to release) across SDS Manager\'s EHS product suite.', 'Build the SDS Manager app with Flutter — offline-first Safety Data Sheet access and chemical-safety workflows for field teams on iOS & Android.', 'Develop additional EHS apps with the team — Workplace Safety (audits, inspections, incidents & asset management) and an EHS Incident Manager — on a shared Riverpod architecture.', 'Built and maintain Axis UI, a shared Flutter component library and design system used across the apps.'] },
   { date: 'Jan 2024 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
     points: ['Owned 3 App Store apps end-to-end — Invoice Matrix (Flutter), Paraphrase AI & Note Genie (React Native) — from requirements through release, backed by Firebase.', 'Integrated in-app purchases & subscriptions across all apps with RevenueCat.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',

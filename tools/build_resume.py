@@ -107,9 +107,10 @@ def doc(variant):
 
     experience = [
         ("Software Engineer II", sds_line, "Oct 2025 &ndash; Present", [
-            "Develop the SDS Manager cross-platform mobile app (iOS &amp; Android) in Flutter, delivering offline-first access to Safety Data Sheet (SDS) libraries for field teams in connectivity-free environments.",
-            "Implement first-aid and hazard lookup and chemical-safety compliance workflows; manage application state with Riverpod.",
-            "Collaborate on requirements and own mobile feature delivery end-to-end &mdash; porting the web platform&rsquo;s SDS management to mobile and shipping cross-platform releases to the App Store and Google Play.",
+            "Lead a team of 2 Flutter developers, owning mobile delivery end-to-end (requirements to release) across SDS Manager&rsquo;s EHS product suite.",
+            "Develop the SDS Manager cross-platform app (iOS &amp; Android) in Flutter &mdash; offline-first access to Safety Data Sheet (SDS) libraries and chemical-safety compliance workflows; application state managed with Riverpod.",
+            "Build additional EHS apps with the team &mdash; Workplace Safety (audits, inspections, incidents, and asset management; multi-locale) and an EHS Incident Manager &mdash; on a shared Riverpod architecture.",
+            "Built and maintain Axis UI, a shared Flutter component library and design system used across the product suite.",
         ]),
         ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2024 &ndash; Sep 2025", [
             "Owned 3 AI productivity and invoicing apps end-to-end &mdash; Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native) &mdash; from requirements through App Store release, backed by Firebase.",
