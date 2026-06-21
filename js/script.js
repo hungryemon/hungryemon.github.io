@@ -152,13 +152,13 @@ const TECH = [
 
 const EXPERIENCE = [
   { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
-    points: ['Building the SDS Manager mobile app with Flutter — offline-first access to Safety Data Sheet libraries, barcode/QR scanning and chemical-safety workflows for field teams.', 'Shipping cross-platform features to iOS & Android, bringing the web platform\'s SDS management capabilities to mobile.'] },
+    points: ['Building the SDS Manager mobile app with Flutter — offline-first access to Safety Data Sheet libraries, barcode/QR scanning and chemical-safety workflows for field teams.', 'Collaborate on requirements and own mobile feature delivery end-to-end — shipping cross-platform releases to iOS & Android and bringing the web platform\'s SDS management to mobile.'] },
   { date: 'Jan 2024 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
-    points: ['Built AI productivity & invoicing apps for iOS — Invoice Matrix in Flutter, Paraphrase AI & Note Genie in React Native — all backed by Firebase.', 'Integrated in-app purchases & subscriptions across all apps with RevenueCat.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
+    points: ['Owned 3 App Store apps end-to-end — Invoice Matrix (Flutter), Paraphrase AI & Note Genie (React Native) — from requirements through release, backed by Firebase.', 'Integrated in-app purchases & subscriptions across all apps with RevenueCat.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',
-    points: ['Built 2 ed-tech apps from scratch (Ostad & Quran Shikkha) serving 20,000+ learners.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.'] },
+    points: ['Owned the build of 2 ed-tech apps from scratch (Ostad & Quran Shikkha), serving 20,000+ learners.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.'] },
   { date: 'Apr 2021 — Mar 2022', role: 'Flutter Developer', company: 'TechAByte Solutions',
-    points: ['Translated Figma designs into pixel-accurate, user-friendly interfaces.', 'Customized 10+ projects and templates to client requirements, always on deadline.'] },
+    points: ['Gathered client requirements and translated Figma designs into pixel-accurate, user-friendly interfaces.', 'Customized 10+ projects and templates to spec, always on deadline.'] },
   { date: 'Sep 2020 — Nov 2020', role: 'Flutter Developer', company: 'DeepSight AI', tag: 'Remote',
     points: ['Contributed to 2 e-commerce apps and 5+ feature/maintenance projects.', 'Coordinated a 3-developer team using an agile process.'] },
   { date: 'Apr 2020 — Jun 2020', role: 'Software Engineer Intern', company: 'Tech5Soft Ltd.',

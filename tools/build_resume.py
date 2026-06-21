@@ -91,6 +91,8 @@ def doc(variant):
         "to the App Store and Google Play reaching 500K+ combined users across ed-tech, AI productivity, healthcare, "
         "and enterprise chemical-safety domains. Strong in Dart/Flutter and React Native, state management "
         "(Riverpod, BLoC, GetX), offline-first architecture, REST APIs, Firebase, in-app purchases, and CI/CD. "
+        "Owns products end-to-end &mdash; from requirement gathering and architecture through release &mdash; "
+        "working independently or leading small teams. "
         + summary_tail
     )
 
@@ -107,21 +109,21 @@ def doc(variant):
         ("Software Engineer II", sds_line, "Oct 2025 &ndash; Present", [
             "Develop the SDS Manager cross-platform mobile app (iOS &amp; Android) in Flutter, delivering offline-first access to Safety Data Sheet (SDS) libraries for field teams in connectivity-free environments.",
             "Implement first-aid and hazard lookup and chemical-safety compliance workflows; manage application state with Riverpod.",
-            "Port the web platform&rsquo;s SDS management capabilities to mobile and ship cross-platform feature releases to the App Store and Google Play.",
+            "Collaborate on requirements and own mobile feature delivery end-to-end &mdash; porting the web platform&rsquo;s SDS management to mobile and shipping cross-platform releases to the App Store and Google Play.",
         ]),
         ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2024 &ndash; Sep 2025", [
-            "Built and shipped 3 AI productivity and invoicing apps to the App Store: Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native), backed by Firebase.",
+            "Owned 3 AI productivity and invoicing apps end-to-end &mdash; Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native) &mdash; from requirements through App Store release, backed by Firebase.",
             "Integrated in-app purchases and subscriptions across all apps using RevenueCat.",
             "Developed a custom ad network for client apps with a ReactJS + Supabase admin panel.",
         ]),
         ("Flutter Developer", "Ostad Ltd. &mdash; Dhaka, Bangladesh", "Apr 2022 &ndash; Dec 2024", [
-            "Built two ed-tech apps from scratch (Ostad live-learning platform and Quran Shikkha) in Flutter, serving 20,000+ learners across iOS, Android, macOS, Windows, and Linux.",
+            "Owned the end-to-end build of two ed-tech apps from scratch (Ostad live-learning platform and Quran Shikkha) in Flutter, serving 20,000+ learners across iOS, Android, macOS, Windows, and Linux.",
             "Reduced Ostad app load time by 30% through performance optimization and profiling.",
             "Integrated 5+ analytics tools (Firebase Analytics, Mixpanel, Sentry, Mux, Smartlook), improving user engagement by 20%.",
             "Built and maintained 50+ reusable packages and plugins.",
         ]),
         ("Flutter Developer", "TechAByte Solutions &mdash; Dhaka, Bangladesh", "Apr 2021 &ndash; Mar 2022", [
-            "Converted Figma designs into pixel-accurate, responsive Flutter user interfaces.",
+            "Gathered client requirements and converted Figma designs into pixel-accurate, responsive Flutter user interfaces.",
             "Customized and delivered 10+ client projects and templates, consistently meeting deadlines.",
         ]),
         ("Flutter Developer", "DeepSight AI &mdash; Remote, Dhaka", "Sep 2020 &ndash; Nov 2020", [
