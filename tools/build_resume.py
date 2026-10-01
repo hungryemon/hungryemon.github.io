@@ -115,7 +115,7 @@ def doc(variant):
             "Rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager web app (React, Express, PostgreSQL) an installable PWA with Web Push.",
             "Built document management, push notifications, and auth token refresh in the Workplace Safety Flutter app; built Axis UI, a shared Flutter design system.",
         ]),
-        ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2024 &ndash; Sep 2025", [
+        ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2025 &ndash; Sep 2025", [
             "Owned 3 AI productivity and invoicing apps end-to-end &mdash; Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native) &mdash; from requirements through App Store release, backed by Firebase.",
             "Integrated in-app purchases and subscriptions across all apps using RevenueCat.",
             "Developed a custom ad network for client apps with a ReactJS + Supabase admin panel.",
