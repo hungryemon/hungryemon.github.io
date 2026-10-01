@@ -1,13 +1,13 @@
 # hungryemon.github.io
 
-Personal portfolio of **Md Shahed Uddin Emon** — Senior Software Engineer & Flutter developer.
+Personal portfolio of **Md Shahed Uddin Emon** — Software Engineer — mobile, desktop & web (Flutter, React, Django).
 
 🔗 **Live:** https://hungryemon.github.io
 
 A fast, single-page portfolio built with plain HTML, CSS and vanilla JavaScript (no build step) and hosted on GitHub Pages.
 
 ## Highlights
-- 13+ shipped apps showcased (App Store & Google Play) with real screenshot galleries
+- 13+ shipped apps showcased (App Store & Google Play) plus full-stack web work, with real screenshot galleries
 - Dark, golden-amber theme with particle hero, typewriter tagline and scroll animations
 - Live GitHub dev-metrics, experience timeline, and skills
 - Fully responsive + reduced-motion friendly

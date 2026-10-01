@@ -10,6 +10,16 @@ const ASSET = (slug, file) => `assets/projects/${slug}/${file}`;
 
 const PROJECTS = [
   {
+    slug: 'maintainone', name: 'MaintainOne', type: 'web', featured: true,
+    cat: 'Web App · Full-Stack',
+    tagline: 'Maintenance management (CMMS) for a US client',
+    desc: 'A full-stack CMMS I built end-to-end for a US client — work requests & work orders, preventive maintenance schedules, asset & location hierarchy, parts, stock & purchasing, role-based access, a technician "My job" view and operational reports.',
+    tech: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Celery', 'Docker'],
+    shots: ['shot-1.webp','shot-2.webp','shot-3.webp','shot-4.webp','shot-5.webp','shot-6.webp','shot-7.webp','shot-8.webp'],
+    primary: 'shot-1.webp',
+    links: {},
+  },
+  {
     slug: 'sds-manager', name: 'SDS Manager', type: 'apps', featured: true,
     cat: 'Productivity · Enterprise', rating: '5.0', reviews: 5,
     tagline: 'Offline-first SDS access for field teams',
@@ -131,10 +141,10 @@ const PROJECTS = [
 ];
 
 const SKILLS = {
-  lang:   ['Dart', 'Flutter', 'React Native', 'TypeScript', 'Swift', 'Java', 'Python'],
+  lang:   ['Dart', 'Flutter', 'React Native', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Django', 'Express', 'Swift', 'Java', 'Python'],
   mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux'],
-  data:   ['Firebase', 'Supabase', 'SQLite', 'Drift', 'Hive', 'MongoDB'],
-  tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git'],
+  data:   ['PostgreSQL', 'Firebase', 'Supabase', 'SQLite', 'Drift', 'Redis', 'Hive', 'MongoDB'],
+  tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git', 'Docker', 'Sentry', 'Playwright'],
 };
 
 const TECH = [
@@ -152,7 +162,7 @@ const TECH = [
 
 const EXPERIENCE = [
   { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
-    points: ['Lead a team of 2 Flutter developers, owning mobile delivery end-to-end (requirements to release) across SDS Manager\'s EHS product suite.', 'Build the SDS Manager app with Flutter — offline-first Safety Data Sheet access and chemical-safety workflows for field teams on iOS & Android.', 'Develop additional EHS apps with the team — Workplace Safety (audits, inspections, incidents & asset management) and an EHS Incident Manager — on a shared Riverpod architecture.', 'Built and maintain Axis UI, a shared Flutter component library and design system used across the apps.'] },
+    points: ['Built the SDS Manager iOS/Android app from scratch and own it end-to-end — architecture, features, CI releases and production monitoring. Lead a team of 2 Flutter developers; ~500 merged PRs (~90% of the repo).', 'Delivered the full inventory product — SSO, offline-first SDS library with Drift sync & search, barcode/QR scanning, stock & kit-lot management, Risk Assessment with AI-suggested hazards, Substitution, QR employee access, user management, permission & subscription gating, in-app updates and analytics.', 'Built most of the EHS module on a multi-package Riverpod / melos architecture — Investigations (5-Why, Fishbone, OSHA/RIDDOR), CAPA, Training, Assets with QR scan-to-inspect, and dynamic capture forms.', 'Kept production stable with Sentry monitoring & crash triage; one design-token palette matched to the web (WCAG AA), 40 languages, 1,000+ test files in CI.', 'Took the Hub One Flutter app multi-platform — iPhone & Mac App Store builds, macOS & Windows support, responsive UI across phone, tablet & desktop, and Sentry release monitoring.', 'Web: rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager (React, Express, PostgreSQL) an installable PWA with Web Push.', 'Built document management, push notifications & token refresh in the Workplace Safety Flutter app, and Axis UI, a shared Flutter design system.'] },
   { date: 'Jan 2024 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
     points: ['Owned 3 App Store apps end-to-end — Invoice Matrix (Flutter), Paraphrase AI & Note Genie (React Native) — from requirements through release, backed by Firebase.', 'Integrated in-app purchases & subscriptions across all apps with RevenueCat.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',
@@ -186,8 +196,8 @@ function renderProjects() {
     const primary = p.primary || (p.shots && p.shots[0]);
     let media;
     if (p.shots) {
-      media = `<div class="card-media" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
-           ${p.type === 'apps' ? `<img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />` : `<span class="card-badge"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`}
+      media = `<div class="card-media${p.type === 'web' ? ' wide' : ''}" data-slug="${p.slug}" role="button" tabindex="0" aria-label="Open ${p.name} gallery">
+           ${p.type === 'web' ? `<span class="card-badge"><i aria-hidden="true" class="fa-solid fa-globe"></i></span>` : p.type === 'apps' ? `<img class="card-icon" src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" loading="lazy" width="46" height="46" />` : `<span class="card-badge"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`}
            ${p.rating ? `<span class="card-rating"><i aria-hidden="true" class="fa-solid fa-star"></i> ${p.rating}</span>` : ''}
            <img class="shot" src="${ASSET(p.slug, primary)}" alt="${p.name} screenshot" loading="lazy" />
            <div class="card-gallery-hint"><span><i aria-hidden="true" class="fa-solid fa-images"></i> View Gallery</span></div>
@@ -224,6 +234,7 @@ function applyFilter(filter) {
     const show = filter === 'all'
       || (filter === 'featured' && c.dataset.featured === 'true')
       || (filter === 'apps' && c.dataset.type === 'apps')
+      || (filter === 'web' && c.dataset.type === 'web')
       || (filter === 'oss' && c.dataset.type === 'oss');
     c.classList.toggle('hide', !show);
   });
@@ -267,7 +278,7 @@ function openLightbox(slug, trigger) {
   lbTrigger = trigger || document.activeElement;
   const head = p.type === 'apps'
     ? `<img src="${ASSET(p.slug, 'icon.png')}" alt="${p.name} icon" />`
-    : `<span class="lb-glyph"><i aria-hidden="true" class="fa-brands fa-github"></i></span>`;
+    : `<span class="lb-glyph"><i aria-hidden="true" class="${p.type === 'web' ? 'fa-solid fa-globe' : 'fa-brands fa-github'}"></i></span>`;
   lbContent.innerHTML = `
     <div class="lb-head">
       ${head}
@@ -404,10 +415,10 @@ function initCounters() {
 
 function initTyped() {
   const node = document.getElementById('typed');
-  if (REDUCE_MOTION || typeof Typed === 'undefined') { node.textContent = 'Flutter Developer.'; return; }
+  if (REDUCE_MOTION || typeof Typed === 'undefined') { node.textContent = 'Software Engineer.'; return; }
   // headline: Flutter-Developer-led
   new Typed('#typed', {
-    strings: ['Flutter Developer.', 'Software Engineer.', 'Cross-Platform App Developer.', 'Mobile App Specialist.', 'Problem Solver.'],
+    strings: ['Software Engineer.', 'Flutter Developer.', 'Full-Stack Developer.', 'Cross-Platform App Developer.', 'Mobile App Specialist.', 'Problem Solver.'],
     typeSpeed: 70, backSpeed: 38, backDelay: 1600, startDelay: 400, loop: true, smartBackspace: true,
   });
 }

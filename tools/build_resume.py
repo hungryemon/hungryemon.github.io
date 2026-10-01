@@ -86,31 +86,34 @@ def doc(variant):
     )
 
     summary = (
-        "Flutter developer and software engineer with 7+ years of experience building high-performance, "
-        "cross-platform applications across iOS, Android, macOS, Windows, Linux, and Web. Shipped 10+ production apps "
-        "to the App Store and Google Play reaching 500K+ combined users across ed-tech, AI productivity, healthcare, "
-        "and enterprise chemical-safety domains. Strong in Dart/Flutter and React Native, state management "
-        "(Riverpod, BLoC, GetX), offline-first architecture, REST APIs, Firebase, in-app purchases, and CI/CD. "
-        "Owns products end-to-end &mdash; from requirement gathering and architecture through release &mdash; "
+        "Software engineer with 7+ years of experience building cross-platform products for mobile, desktop "
+        "and web. Shipped 10+ production apps to the App Store and Google Play reaching 500K+ combined users across "
+        "ed-tech, AI productivity, healthcare, and enterprise EHS / chemical-safety domains. Mobile-first (Flutter, "
+        "React Native) with full-stack delivery in React/Next.js and Django. Owns products end-to-end &mdash; from "
+        "requirements and architecture through testing, store review, release, and production monitoring &mdash; "
         "working independently or leading small teams. "
         + summary_tail
     )
 
     skills = [
-        ("Languages &amp; Frameworks", "Dart, Flutter, React Native, TypeScript, Swift, Java, Python"),
-        ("State Management", "Riverpod, BLoC, GetX, Provider, Redux"),
-        ("Databases &amp; Storage", "Firebase, Supabase, SQLite, Drift, Hive, MongoDB"),
-        ("Mobile &amp; Architecture", "Cross-platform development, Offline-first sync, REST APIs, Clean Architecture / MVVM, In-app purchases (RevenueCat), Push notifications"),
-        ("Tools &amp; Practices", "Git, CI/CD, Agile/Scrum, Android Studio, Xcode, VS Code, Cursor, Postman, Figma, Firebase Analytics, Mixpanel, Sentry"),
+        ("Languages", "Dart, TypeScript / JavaScript, Python, Swift, Java"),
+        ("Mobile &amp; Desktop", "Flutter, React Native, Riverpod, BLoC, GetX, Provider, Redux"),
+        ("Web &amp; Backend", "React, Next.js, Vite, Tailwind CSS, Django / DRF, Express, Celery, PWA &amp; Web Push"),
+        ("Databases &amp; Storage", "PostgreSQL, SQLite / Drift, Firebase, Supabase, Redis, Hive, MongoDB"),
+        ("Architecture", "Offline-first sync, Modular monorepos (melos), Clean Architecture / MVVM, Design systems &amp; tokens, REST APIs, RBAC, i18n, In-app purchases (RevenueCat), Push notifications"),
+        ("Tools &amp; Practices", "Git, CI/CD, Docker, Sentry, Playwright, Vitest, Firebase Analytics, Mixpanel, Figma, Postman, Xcode, Android Studio, Agile/Scrum"),
         ("Platforms", "iOS, Android, macOS, Windows, Linux, Web"),
     ]
 
     experience = [
         ("Software Engineer II", sds_line, "Oct 2025 &ndash; Present", [
-            "Lead a team of 2 Flutter developers, owning mobile delivery end-to-end (requirements to release) across SDS Manager&rsquo;s EHS product suite.",
-            "Develop the SDS Manager cross-platform app (iOS &amp; Android) in Flutter &mdash; offline-first access to Safety Data Sheet (SDS) libraries and chemical-safety compliance workflows; application state managed with Riverpod.",
-            "Build additional EHS apps with the team &mdash; Workplace Safety (audits, inspections, incidents, and asset management; multi-locale) and an EHS Incident Manager &mdash; on a shared Riverpod architecture.",
-            "Built and maintain Axis UI, a shared Flutter component library and design system used across the product suite.",
+            "Built the SDS Manager iOS/Android app from scratch and own it end-to-end &mdash; architecture, features, CI releases to the App Store and Google Play, and production monitoring. Lead a team of 2 Flutter developers; authored ~500 merged pull requests (~90% of the repository&rsquo;s PRs).",
+            "Delivered the full inventory product: SSO login, offline-first SDS library with Drift sync and search, barcode/QR scanning, stock and kit-lot management with change logs and CSV export, Risk Assessment with AI-suggested hazards and exposure data, Substitution, QR employee access, user management, subscription and permission gating at web parity, in-app update and review prompts, and analytics with an offline queue.",
+            "Built most of the EHS module on a multi-package Riverpod / melos architecture &mdash; Investigations (5-Why, Fishbone, OSHA/RIDDOR compliance), CAPA, Training (courses, quizzes, certificates), Assets with QR scan-to-inspect, and dynamic capture forms with 17 field types.",
+            "Kept production stable through Sentry monitoring, crash triage, and defensive JSON parsing across every feature model; unified theming into one design-token palette matched to the web app (WCAG AA); localized into 40 languages; grew the suite to 1,000+ test files in CI.",
+            "Took the Hub One Flutter app multi-platform &mdash; shipped iPhone and Mac App Store builds, added macOS and Windows support, made the UI responsive across phone, tablet and desktop, and set up release monitoring with Sentry (symbol and obfuscation-map upload); cleared App Store Review and fixed an iOS 27 launch crash.",
+            "Rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager web app (React, Express, PostgreSQL) an installable PWA with Web Push.",
+            "Built document management, push notifications, and auth token refresh in the Workplace Safety Flutter app; built Axis UI, a shared Flutter design system.",
         ]),
         ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2024 &ndash; Sep 2025", [
             "Owned 3 AI productivity and invoicing apps end-to-end &mdash; Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native) &mdash; from requirements through App Store release, backed by Firebase.",
@@ -137,6 +140,8 @@ def doc(variant):
     ]
 
     projects = [
+        ("MaintainOne", "Django, React, TypeScript, PostgreSQL, Celery, Docker", "CMMS built end-to-end for a US client &mdash; work requests and orders, preventive maintenance, asset/location hierarchy, inventory and purchasing, role-based access, and reporting.",
+         []),
         ("SDS Manager", "Flutter, Riverpod, offline-first", "Enterprise chemical-safety (EHS) Safety Data Sheet app.",
          [("App Store","https://apps.apple.com/us/app/sds-manager/id6754279703"),("Google Play","https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp")]),
         ("Invoice Matrix", "Flutter, Firebase, RevenueCat", "PDF invoicing &amp; billing app.",
@@ -169,7 +174,7 @@ def doc(variant):
     p.append(
         '<header class="hdr"><div class="hdr-text">'
         '<h1>Md Shahed Uddin Emon</h1>'
-        '<div class="subtitle">Flutter Developer &nbsp;|&nbsp; Software Engineer</div>'
+        '<div class="subtitle">Software Engineer</div>'
         f'<div class="contact">{contact}</div>'
         f'</div><img class="photo" src="{PHOTO}" alt="Md Shahed Uddin Emon" /></header>'
     )

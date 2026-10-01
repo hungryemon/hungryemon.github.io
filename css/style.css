@@ -225,6 +225,8 @@ img { max-width: 100%; display: block; }
 .card-media { position: relative; height: 280px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; cursor: pointer; background:
    radial-gradient(110% 90% at 50% 120%, var(--media-tint, var(--accent-soft)) 0%, transparent 60%), var(--bg-2); }
 .card-media .shot { height: 90%; width: auto; max-width: 86%; object-fit: cover; object-position: top center; border-radius: 16px 16px 0 0; box-shadow: 0 14px 36px rgba(0,0,0,0.55); transition: transform 0.45s var(--ease); border: 1px solid rgba(255,255,255,0.06); border-bottom: none; }
+/* Landscape web screenshots */
+.card-media.wide .shot { height: auto; width: 92%; max-width: 92%; max-height: 90%; border-radius: 12px 12px 0 0; }
 .project-card:hover .card-media .shot { transform: translateY(-8px) scale(1.03); }
 .card-icon { position: absolute; top: 16px; left: 16px; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--border-2); box-shadow: var(--shadow-sm); z-index: 3; background: var(--surface); }
 .card-rating { position: absolute; top: 18px; right: 16px; z-index: 3; background: rgba(0,0,0,0.55); backdrop-filter: blur(4px); color: var(--accent-2); font-size: 0.78rem; font-weight: 600; padding: 5px 11px; border-radius: 999px; display: flex; align-items: center; gap: 5px; }
