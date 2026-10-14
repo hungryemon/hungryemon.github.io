@@ -34,9 +34,9 @@ def chrome_path():
 PHOTO = "data:image/jpeg;base64," + base64.b64encode(open(PHOTO_FILE, "rb").read()).decode()
 
 CSS = """
-@page { size: Letter; margin: 0.45in 0.55in; }
+@page { size: Letter; margin: 0.4in 0.55in; }
 * { box-sizing: border-box; }
-body { font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 9.5pt; line-height: 1.32; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
+body { font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 9.5pt; line-height: 1.28; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
 a { color: #1b1b1b; text-decoration: none; }
 h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
 .subtitle { font-size: 12pt; font-weight: 600; color: #333; margin: 1px 0 5px; }
@@ -46,7 +46,7 @@ h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
 .hdr { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
 .hdr-text { flex: 1 1 auto; }
 .photo { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1.5px solid #9a9a9a; }
-h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 10px 0 5px; }
+h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 9px 0 4px; }
 p { margin: 2px 0; }
 .summary { margin: 2px 0 0; text-align: justify; }
 .skills div { margin: 2.5px 0; }
@@ -57,7 +57,7 @@ p { margin: 2px 0; }
 .when { color: #555; }
 .orgline { margin: 0 0 1px; }
 ul { margin: 3px 0 0; padding-left: 17px; }
-li { margin-bottom: 1.5px; }
+li { margin-bottom: 1px; }
 .proj { margin: 2.7px 0; }
 .proj b { color: #111; }
 .plinks a { color: #1f57b6; text-decoration: none; }
@@ -148,6 +148,10 @@ def doc(variant):
     ]
 
     projects = [
+        ("SDS Manager", "Flutter, Riverpod, offline-first", "Chemical-safety (EHS) app: offline SDS library, QR scanning, inventory &amp; EHS workflows.",
+         [("App Store","https://apps.apple.com/us/app/sds-manager/id6754279703"),("Google Play","https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp")]),
+        ("Hub One", "Flutter, iOS, macOS, Windows", "Multi-product business app (tasks, sales, support, ledger) for iPhone, iPad &amp; Mac.",
+         [("App Store","https://apps.apple.com/us/app/hubone-sds/id6814464975")]),
         ("MaintainOne", "Django, React, TypeScript, PostgreSQL, Celery, Docker", "CMMS built end-to-end for a US client &mdash; work requests and orders, preventive maintenance, asset/location hierarchy, inventory and purchasing, role-based access, and reporting.",
          []),
         ("Ostad", "Flutter, GetX, live streaming", "Multi-platform live-learning bootcamp; 20,000+ learners, 4.7&#9733;.",
