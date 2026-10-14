@@ -141,12 +141,24 @@ const PROJECTS = [
   },
 ];
 
-const SKILLS = {
-  lang:   ['Dart', 'Flutter', 'React Native', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Django', 'Express', 'Swift', 'Java', 'Python'],
-  mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux', 'Platform channels'],
-  data:   ['PostgreSQL', 'Firebase', 'Supabase', 'SQLite', 'Drift', 'Redis', 'Hive', 'MongoDB'],
-  tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git', 'Docker', 'Sentry', 'GitHub Actions', 'Codemagic', 'Unit / Widget / Integration tests', 'Playwright'],
-};
+const SKILLS = [
+  { title: 'Languages', icon: 'fa-code',
+    items: ['Dart', 'TypeScript', 'JavaScript', 'Python', 'Swift', 'Java'] },
+  { title: 'Mobile & Cross-Platform', icon: 'fa-mobile-screen',
+    items: ['Flutter', 'React Native', 'iOS', 'Android', 'macOS', 'Windows', 'Linux', 'Web', 'Riverpod', 'BLoC', 'Provider', 'GetX', 'Redux', 'Platform channels', 'RevenueCat IAP', 'Push notifications'] },
+  { title: 'Web & Backend', icon: 'fa-globe',
+    items: ['React', 'Next.js', 'Vite', 'Tailwind CSS', 'Django / DRF', 'Express', 'Celery', 'REST APIs', 'PWA & Web Push'] },
+  { title: 'Databases & Storage', icon: 'fa-database',
+    items: ['PostgreSQL', 'MongoDB', 'Redis', 'SQLite / Drift', 'Hive', 'Firebase', 'Supabase'] },
+  { title: 'Architecture', icon: 'fa-sitemap',
+    items: ['Clean Architecture / MVVM', 'Offline-first sync', 'Monorepos (melos)', 'Design systems & tokens', 'RBAC', 'i18n'] },
+  { title: 'Testing & CI/CD', icon: 'fa-vial-circle-check',
+    items: ['Unit tests', 'Widget tests', 'Integration tests', 'Playwright', 'Vitest', 'GitHub Actions', 'Codemagic', 'Docker', 'App Store Connect', 'Play Console'] },
+  { title: 'Tools & Monitoring', icon: 'fa-screwdriver-wrench',
+    items: ['Git', 'VS Code', 'Android Studio', 'Xcode', 'Figma', 'Postman', 'Burp Suite', 'Sentry', 'Firebase Analytics', 'Mixpanel', 'Agile / Scrum'] },
+  { title: 'AI & Agents', icon: 'fa-robot',
+    items: ['Claude Code', 'OpenCode', 'Hermes Agent', 'Cursor', 'Trae', 'Grok', 'Ollama'] },
+];
 
 const TECH = [
   { img: 'assets/tech/flutter.png',          name: 'Flutter',      d: 'Primary toolkit' },
@@ -243,10 +255,11 @@ function applyFilter(filter) {
 }
 
 function renderSkills() {
-  document.getElementById('chipsLang').innerHTML = chips(SKILLS.lang);
-  document.getElementById('chipsMobile').innerHTML = chips(SKILLS.mobile);
-  document.getElementById('chipsData').innerHTML = chips(SKILLS.data);
-  document.getElementById('chipsTools').innerHTML = chips(SKILLS.tools);
+  document.getElementById('skillCats').innerHTML = SKILLS.map(g => `
+    <div class="skill-cat reveal">
+      <h3><i aria-hidden="true" class="fa-solid ${g.icon}"></i> ${g.title.replace('&', '&amp;')}</h3>
+      <div class="chips">${chips(g.items.map(x => x.replace('&', '&amp;')))}</div>
+    </div>`).join('');
   const car = document.getElementById('techCarousel');
   const cardHtml = (t, dup) => {
     const visual = t.img

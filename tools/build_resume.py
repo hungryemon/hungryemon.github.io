@@ -49,7 +49,7 @@ h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
 h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 9px 0 4px; }
 p { margin: 2px 0; }
 .summary { margin: 2px 0 0; text-align: justify; }
-.skills div { margin: 2.5px 0; }
+.skills div { margin: 1.5px 0; }
 .skills b { color: #111; }
 .job { margin-bottom: 6px; }
 .role { font-weight: 700; font-size: 10.5pt; }
@@ -97,15 +97,18 @@ def doc(variant):
     )
 
     skills = [
-        ("Languages", "Dart, TypeScript / JavaScript, Python, Swift, Java"),
-        ("Mobile &amp; Desktop", "Flutter, React Native, Riverpod, BLoC, GetX, Provider, Redux, Platform channels (MethodChannel)"),
-        ("Web &amp; Backend", "React, Next.js, Vite, Tailwind CSS, Django / DRF, Express, Celery, PWA &amp; Web Push"),
-        ("Databases &amp; Storage", "PostgreSQL, SQLite / Drift, Firebase, Supabase, Redis, Hive, MongoDB"),
-        ("Architecture", "Offline-first sync, Modular monorepos (melos), Clean Architecture / MVVM, Design systems &amp; tokens, REST APIs, RBAC, i18n, In-app purchases (RevenueCat), Push notifications"),
-        ("Testing", "Unit testing, Widget testing, Integration testing (Flutter), Playwright, Vitest"),
-        ("CI/CD &amp; Release", "GitHub Actions, Codemagic, App Store Connect, Google Play Console, Inno Setup (Windows installers)"),
-        ("Tools &amp; Practices", "Git, Docker, Sentry, Firebase Analytics, Mixpanel, Figma, Postman, Xcode, Android Studio, Agile/Scrum"),
-        ("Platforms", "iOS, Android, macOS, Windows, Linux, Web"),
+        ("Languages", "Dart, TypeScript, JavaScript, Python, Swift, Java"),
+        ("Cross-Platform", "Flutter, React Native &mdash; iOS, Android, macOS, Windows, Linux, Web"),
+        ("Native &amp; Integrations", "Platform channels (MethodChannel), In-app purchases (RevenueCat), Push notifications"),
+        ("State Management", "Riverpod, BLoC, Provider, GetX, Redux"),
+        ("Web &amp; Backend", "React, Next.js, Vite, Tailwind CSS, Django / DRF, Express, Celery, REST APIs, PWA &amp; Web Push"),
+        ("Databases &amp; Storage", "PostgreSQL, MongoDB, Redis, SQLite / Drift, Hive, Firebase, Supabase"),
+        ("Architecture", "Clean Architecture / MVVM, Offline-first sync, Monorepos (melos), Design systems &amp; tokens, RBAC, i18n"),
+        ("Testing", "Unit, widget &amp; integration testing (Flutter), Playwright, Vitest"),
+        ("CI/CD &amp; Release", "GitHub Actions, Codemagic, Docker, App Store Connect, Play Console, Inno Setup (Windows installers)"),
+        ("Monitoring &amp; Analytics", "Sentry, Firebase Analytics, Mixpanel"),
+        ("Tools &amp; Workflow", "Git, VS Code, Xcode, Android Studio, Figma, Postman, Agile/Scrum"),
+        ("AI-Assisted Development", "Claude Code, OpenCode, Hermes Agent, Cursor, Trae, Grok, Ollama (local LLMs)"),
     ]
 
     experience = [
