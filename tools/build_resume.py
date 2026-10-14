@@ -34,25 +34,25 @@ def chrome_path():
 PHOTO = "data:image/jpeg;base64," + base64.b64encode(open(PHOTO_FILE, "rb").read()).decode()
 
 CSS = """
-@page { size: Letter; margin: 0.5in 0.62in; }
+@page { size: Letter; margin: 0.45in 0.55in; }
 * { box-sizing: border-box; }
-body { font-family: 'Calibri','Carlito','Helvetica Neue',Arial,sans-serif; font-size: 10.5pt; line-height: 1.33; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
+body { font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 9.5pt; line-height: 1.32; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
 a { color: #1b1b1b; text-decoration: none; }
-h1 { font-size: 20pt; margin: 0; letter-spacing: 0.3px; }
-.subtitle { font-size: 11pt; font-weight: 600; color: #333; margin: 1px 0 5px; }
+h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
+.subtitle { font-size: 12pt; font-weight: 600; color: #333; margin: 1px 0 5px; }
 .contact { font-size: 9.5pt; color: #2a2a2a; }
 .contact span { white-space: nowrap; }
 .sep { color: #999; padding: 0 5px; }
 .hdr { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
 .hdr-text { flex: 1 1 auto; }
 .photo { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1.5px solid #9a9a9a; }
-h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 13px 0 6px; }
+h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 10px 0 5px; }
 p { margin: 2px 0; }
 .summary { margin: 2px 0 0; text-align: justify; }
 .skills div { margin: 2.5px 0; }
 .skills b { color: #111; }
-.job { margin-bottom: 8px; }
-.role { font-weight: 700; font-size: 10.8pt; }
+.job { margin-bottom: 6px; }
+.role { font-weight: 700; font-size: 10.5pt; }
 .org { font-weight: 600; color: #222; }
 .when { color: #555; }
 .orgline { margin: 0 0 1px; }
@@ -61,7 +61,8 @@ li { margin-bottom: 1.5px; }
 .proj { margin: 2.7px 0; }
 .proj b { color: #111; }
 .plinks a { color: #1f57b6; text-decoration: none; }
-.plinks { color: #1f57b6; font-size: 9.3pt; }
+.plinks { color: #1f57b6; }
+.ilink { color: #1f57b6; }
 .edu-item { margin: 2px 0; }
 .muted { color: #555; }
 """
@@ -86,7 +87,7 @@ def doc(variant):
     )
 
     summary = (
-        "Software engineer with 7+ years of experience building cross-platform products for mobile, desktop "
+        "Software engineer with 6+ years of experience building cross-platform products for mobile, desktop "
         "and web. Shipped 10+ production apps to the App Store and Google Play reaching 500K+ combined users across "
         "ed-tech, AI productivity, healthcare, and enterprise EHS / chemical-safety domains. Mobile-first (Flutter, "
         "React Native) with full-stack delivery in React/Next.js and Django. Owns products end-to-end &mdash; from "
@@ -97,34 +98,41 @@ def doc(variant):
 
     skills = [
         ("Languages", "Dart, TypeScript / JavaScript, Python, Swift, Java"),
-        ("Mobile &amp; Desktop", "Flutter, React Native, Riverpod, BLoC, GetX, Provider, Redux"),
+        ("Mobile &amp; Desktop", "Flutter, React Native, Riverpod, BLoC, GetX, Provider, Redux, Platform channels (MethodChannel)"),
         ("Web &amp; Backend", "React, Next.js, Vite, Tailwind CSS, Django / DRF, Express, Celery, PWA &amp; Web Push"),
         ("Databases &amp; Storage", "PostgreSQL, SQLite / Drift, Firebase, Supabase, Redis, Hive, MongoDB"),
         ("Architecture", "Offline-first sync, Modular monorepos (melos), Clean Architecture / MVVM, Design systems &amp; tokens, REST APIs, RBAC, i18n, In-app purchases (RevenueCat), Push notifications"),
-        ("Tools &amp; Practices", "Git, CI/CD, Docker, Sentry, Playwright, Vitest, Firebase Analytics, Mixpanel, Figma, Postman, Xcode, Android Studio, Agile/Scrum"),
+        ("Testing", "Unit testing, Widget testing, Integration testing (Flutter), Playwright, Vitest"),
+        ("CI/CD &amp; Release", "GitHub Actions, Codemagic, App Store Connect, Google Play Console, Inno Setup (Windows installers)"),
+        ("Tools &amp; Practices", "Git, Docker, Sentry, Firebase Analytics, Mixpanel, Figma, Postman, Xcode, Android Studio, Agile/Scrum"),
         ("Platforms", "iOS, Android, macOS, Windows, Linux, Web"),
     ]
 
     experience = [
         ("Software Engineer II", sds_line, "Oct 2025 &ndash; Present", [
-            "Built the SDS Manager iOS/Android app from scratch and own it end-to-end &mdash; architecture, features, CI releases to the App Store and Google Play, and production monitoring. Lead a team of 2 Flutter developers; authored ~500 merged pull requests (~90% of the repository&rsquo;s PRs).",
+            "Built the SDS Manager iOS/Android app (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/sds-manager/id6754279703\">App Store</a> &middot; <a class=\"ilink\" href=\"https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp\">Google Play</a>) from scratch and own it end-to-end &mdash; architecture, features, CI/CD releases to the App Store and Google Play, and production monitoring. Lead a team of 2 Flutter developers through task planning, code reviews, and mentoring.",
             "Delivered the full inventory product: SSO login, offline-first SDS library with Drift sync and search, barcode/QR scanning, stock and kit-lot management with change logs and CSV export, Risk Assessment with AI-suggested hazards and exposure data, Substitution, QR employee access, user management, subscription and permission gating at web parity, in-app update and review prompts, and analytics with an offline queue.",
             "Built most of the EHS module on a multi-package Riverpod / melos architecture &mdash; Investigations (5-Why, Fishbone, OSHA/RIDDOR compliance), CAPA, Training (courses, quizzes, certificates), Assets with QR scan-to-inspect, and dynamic capture forms with 17 field types.",
-            "Kept production stable through Sentry monitoring, crash triage, and defensive JSON parsing across every feature model; unified theming into one design-token palette matched to the web app (WCAG AA); localized into 40 languages; grew the suite to 1,000+ test files in CI.",
+            "Kept production stable through Sentry monitoring, crash triage, and defensive JSON parsing across every feature model; grew the automated test suite (unit, widget, and integration tests) to 1,000+ test files running in CI.",
+            "Unified theming into a design-token palette matched to the web app (WCAG AA) and localized the app into 40 languages.",
             "Took the Hub One Flutter app multi-platform &mdash; shipped iPhone and Mac App Store builds, added macOS and Windows support, made the UI responsive across phone, tablet and desktop, and set up release monitoring with Sentry (symbol and obfuscation-map upload).",
             "Rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager web app (React, Express, PostgreSQL) an installable PWA with Web Push.",
             "Built document management, push notifications, and auth token refresh in the Workplace Safety Flutter app; built Axis UI, a shared Flutter design system.",
         ]),
         ("Senior Software Engineer", "AlgoSoft Technologies Ltd. &mdash; Remote", "Jan 2025 &ndash; Sep 2025", [
-            "Owned 3 AI productivity and invoicing apps end-to-end &mdash; Invoice Matrix (Flutter), Paraphrase AI and Note Genie (React Native) &mdash; from requirements through App Store release, backed by Firebase.",
-            "Integrated in-app purchases and subscriptions across all apps using RevenueCat.",
+            "Owned 3 AI productivity and invoicing apps end-to-end &mdash; from requirements and architecture through App Store release &mdash; backed by Firebase, with RevenueCat in-app purchases and subscriptions across all apps.",
+            "Built Invoice Matrix in Flutter, a PDF invoicing and billing app (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/invoice-matrix-pdf-invoices/id6742684220\">App Store</a>).",
+            "Built Paraphrase AI in React Native and TypeScript, an AI rewriting and humanizing app powered by LLM APIs and supporting 185+ languages (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/paraphrase-ai-smart-humanizer/id6746731727\">App Store</a>).",
+            "Built Note Genie in React Native, an AI note-taker that uses AI transcription to turn audio, video and text into organized notes (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/lecture-note-taker-note-genie/id6748276655\">App Store</a>).",
             "Developed a custom ad network for client apps with a ReactJS + Supabase admin panel.",
         ]),
         ("Flutter Developer", "Ostad Ltd. &mdash; Dhaka, Bangladesh", "Apr 2022 &ndash; Dec 2024", [
             "Owned the end-to-end build of two ed-tech apps from scratch (Ostad live-learning platform and Quran Shikkha) in Flutter, serving 20,000+ learners across iOS, Android, macOS, Windows, and Linux.",
+            "Implemented live-streaming classes in the Ostad bootcamp app using GetX state management.",
+            "Integrated SSLCommerz payments into Quran Shikkha, a Bengali-language Quran-learning app (<a class=\"ilink\" href=\"https://play.google.com/store/apps/details?id=com.quranshikkha.app\">Google Play</a>).",
             "Reduced Ostad app load time by 30% through performance optimization and profiling.",
             "Integrated 5+ analytics tools (Firebase Analytics, Mixpanel, Sentry, Mux, Smartlook), improving user engagement by 20%.",
-            "Built and maintained 50+ reusable packages and plugins.",
+            "Built <a class=\"ilink\" href=\"https://pub.dev/packages/video_player_mux\">video_player_mux</a>, a native Android Flutter plugin using MethodChannel (ExoPlayer + Mux Data video monitoring), and published it to pub.dev.",
         ]),
         ("Flutter Developer", "TechAByte Solutions &mdash; Dhaka, Bangladesh", "Apr 2021 &ndash; Mar 2022", [
             "Gathered client requirements and converted Figma designs into pixel-accurate, responsive Flutter user interfaces.",
@@ -142,32 +150,14 @@ def doc(variant):
     projects = [
         ("MaintainOne", "Django, React, TypeScript, PostgreSQL, Celery, Docker", "CMMS built end-to-end for a US client &mdash; work requests and orders, preventive maintenance, asset/location hierarchy, inventory and purchasing, role-based access, and reporting.",
          []),
-        ("SDS Manager", "Flutter, Riverpod, offline-first", "Enterprise chemical-safety (EHS) Safety Data Sheet app.",
-         [("App Store","https://apps.apple.com/us/app/sds-manager/id6754279703"),("Google Play","https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp")]),
-        ("Invoice Matrix", "Flutter, Firebase, RevenueCat", "PDF invoicing &amp; billing app.",
-         [("App Store","https://apps.apple.com/us/app/invoice-matrix-pdf-invoices/id6742684220")]),
-        ("Paraphrase AI", "React Native, TypeScript, LLM APIs", "AI rewriting/humanizing app supporting 185+ languages.",
-         [("App Store","https://apps.apple.com/us/app/paraphrase-ai-smart-humanizer/id6746731727")]),
-        ("Note Genie", "React Native, AI transcription", "AI note-taker converting audio, video and text into organized notes.",
-         [("App Store","https://apps.apple.com/us/app/lecture-note-taker-note-genie/id6748276655")]),
         ("Ostad", "Flutter, GetX, live streaming", "Multi-platform live-learning bootcamp; 20,000+ learners, 4.7&#9733;.",
          [("App Store","https://apps.apple.com/us/app/ostad-app/id6446163017"),("Google Play","https://play.google.com/store/apps/details?id=com.ostad.app"),("Web","https://ostad.app"),("Windows","https://cutt.ly/Fr3QsjFo")]),
         ("Quran Shikkha", "Flutter, SSLCommerz", "Online Quran-learning ed-tech app (Bengali).",
          [("Google Play","https://play.google.com/store/apps/details?id=com.quranshikkha.app")]),
-        ("Capito Basic by IFEN", "Flutter, EN/DE", "Clinical cognitive &amp; attention testing tool.",
-         [("App Store","https://apps.apple.com/us/app/capito-basic-by-ifen/id1550991580")]),
-        ("Capito Xpert by IFEN", "Flutter, data visualization", "Advanced cognitive assessment with Stroop tests.",
-         [("App Store","https://apps.apple.com/us/app/capito-xpert-by-ifen/id1550994819"),("Google Play","https://play.google.com/store/apps/details?id=com.ifen.capitoxpert")]),
-        ("IFEN Learning Portal", "Flutter", "Neurofeedback training &amp; certification delivery.",
-         [("App Store","https://apps.apple.com/us/app/ifen-learning-portal/id1547252500"),("Google Play","https://play.google.com/store/apps/details?id=com.ifen.neurofeedback_academy")]),
-        ("IFEN Symptom Tracker", "Flutter, charts", "Patient symptom logging &amp; monitoring (EN/DE).",
-         [("App Store","https://apps.apple.com/us/app/ifen-symptom-tracker/id6503682705"),("Google Play","https://play.google.com/store/apps/details?id=com.ifen.symptom_tracker")]),
+        ("IFEN Clinical Apps", "Flutter, data visualization, EN/DE", 'Healthcare app suite: Capito Basic (<a class="ilink" href="https://apps.apple.com/us/app/capito-basic-by-ifen/id1550991580">App Store</a>) and Capito Xpert (<a class="ilink" href="https://apps.apple.com/us/app/capito-xpert-by-ifen/id1550994819">App Store</a> &middot; <a class="ilink" href="https://play.google.com/store/apps/details?id=com.ifen.capitoxpert">Google Play</a>) for clinical cognitive &amp; attention testing (Stroop tests); IFEN Learning Portal (<a class="ilink" href="https://apps.apple.com/us/app/ifen-learning-portal/id1547252500">App Store</a> &middot; <a class="ilink" href="https://play.google.com/store/apps/details?id=com.ifen.neurofeedback_academy">Google Play</a>) for neurofeedback training &amp; certification; IFEN Symptom Tracker (<a class="ilink" href="https://apps.apple.com/us/app/ifen-symptom-tracker/id6503682705">App Store</a> &middot; <a class="ilink" href="https://play.google.com/store/apps/details?id=com.ifen.symptom_tracker">Google Play</a>) for patient symptom logging &amp; monitoring.',
+         []),
         ("Watcher", "Flutter, GetX, TMDB API", "Cross-platform movie &amp; TV browser (open source).",
          [("GitHub","https://github.com/hungryemon/watcher")]),
-        ("Todo App", "Flutter, GetX", "Cross-platform task manager with integration tests (open source).",
-         [("GitHub","https://github.com/hungryemon/todo_app")]),
-        ("Django Weather", "Python, Django, AirNow API", "Air-quality lookup by US zip code (open source).",
-         [("GitHub","https://github.com/hungryemon/djangoweather")]),
     ]
 
     p = []
@@ -200,11 +190,11 @@ def doc(variant):
         p.append(f'<div class="proj"><b>{name}</b> <span class="muted">({tech})</span> &mdash; {desc}{lk}</div>')
     p.append('<h2>Education</h2>')
     p.append('<div class="edu-item"><b>B.Sc. in Computer Science &amp; Engineering</b> &mdash; Daffodil International University, Dhaka, Bangladesh <span class="when">&nbsp;|&nbsp; 2019</span></div>')
+    p.append('<div class="edu-item muted" style="padding-left:12px">Activities: Student Prefect (2016)</div>')
     p.append('<div class="edu-item"><b>Higher Secondary Certificate (H.S.C.), Science</b> &mdash; Bir Shrestha Munshi Abdur Rouf Public College, Dhaka <span class="when">&nbsp;|&nbsp; 2014</span></div>')
     p.append('<div class="edu-item"><b>Secondary School Certificate (S.S.C.), Science</b> &mdash; Motijheel Model High School &amp; College, Dhaka <span class="when">&nbsp;|&nbsp; 2012</span></div>')
     p.append('<h2>Certifications</h2>')
     p.append('<div class="edu-item">Full-Stack Web Development (Python, Django &amp; React JS) &mdash; Skill Jobs <span class="when">&nbsp;|&nbsp; 2021</span></div>')
-    p.append('<div class="edu-item">Student Prefect &mdash; Daffodil International University <span class="when">&nbsp;|&nbsp; 2016</span></div>')
     p.append('<h2>Languages</h2>')
     p.append('<div class="edu-item">Bengali (Native) &nbsp;&middot;&nbsp; English (Professional / Advanced)</div>')
 

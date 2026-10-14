@@ -121,30 +121,21 @@ const PROJECTS = [
     links: { github: 'https://github.com/hungryemon/watcher' },
   },
   {
-    slug: 'todo', name: 'Todo App', type: 'oss',
-    cat: 'Open Source · Flutter',
-    tagline: 'Flutter + GetX task manager',
-    desc: 'A clean cross-platform to-do app built with Flutter and the GetX framework — add tasks, toggle completion — with integration tests covering the core flows.',
-    tech: ['Flutter', 'Dart', 'GetX', 'Integration Tests'],
+    slug: 'video-player-mux', name: 'video_player_mux', type: 'oss',
+    cat: 'Open Source · Flutter Plugin',
+    tagline: 'Native Android video plugin with Mux Data',
+    desc: 'A Flutter plugin for inline video on Android, built natively with MethodChannel on ExoPlayer and wired to Mux Data for video monitoring. Built at Ostad and published to pub.dev.',
+    tech: ['Flutter', 'Dart', 'Kotlin / Android', 'MethodChannel', 'ExoPlayer', 'Mux Data'],
     cover: 'cover.webp',
-    links: { github: 'https://github.com/hungryemon/todo_app' },
-  },
-  {
-    slug: 'django', name: 'Django Weather', type: 'oss',
-    cat: 'Open Source · Python',
-    tagline: 'Air-quality lookup by US zip code',
-    desc: 'A Django web app that looks up real-time air quality by US zip code via the AirNow API, mapping AQI categories to human-readable labels and colour codes.',
-    tech: ['Python', 'Django', 'AirNow API', 'requests'],
-    cover: 'cover.webp',
-    links: { github: 'https://github.com/hungryemon/djangoweather' },
+    links: { pub: 'https://pub.dev/packages/video_player_mux', github: 'https://github.com/hungryemon/video_player_mux' },
   },
 ];
 
 const SKILLS = {
   lang:   ['Dart', 'Flutter', 'React Native', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Django', 'Express', 'Swift', 'Java', 'Python'],
-  mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux'],
+  mobile: ['Riverpod', 'GetX', 'BLoC', 'Provider', 'Redux', 'Platform channels'],
   data:   ['PostgreSQL', 'Firebase', 'Supabase', 'SQLite', 'Drift', 'Redis', 'Hive', 'MongoDB'],
-  tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git', 'Docker', 'Sentry', 'Playwright'],
+  tools:  ['VS Code', 'Cursor', 'Trae', 'Android Studio', 'Xcode', 'Postman', 'Figma', 'Burp Suite', 'Git', 'Docker', 'Sentry', 'GitHub Actions', 'Codemagic', 'Unit / Widget / Integration tests', 'Playwright'],
 };
 
 const TECH = [
@@ -162,11 +153,11 @@ const TECH = [
 
 const EXPERIENCE = [
   { date: 'Oct 2025 — Present', role: 'Software Engineer II', company: 'SDS Manager · Oslo, Norway', tag: 'Remote',
-    points: ['Built the SDS Manager iOS/Android app from scratch and own it end-to-end — architecture, features, CI releases and production monitoring. Lead a team of 2 Flutter developers; ~500 merged PRs (~90% of the repo).', 'Delivered the full inventory product — SSO, offline-first SDS library with Drift sync & search, barcode/QR scanning, stock & kit-lot management, Risk Assessment with AI-suggested hazards, Substitution, QR employee access, user management, permission & subscription gating, in-app updates and analytics.', 'Built most of the EHS module on a multi-package Riverpod / melos architecture — Investigations (5-Why, Fishbone, OSHA/RIDDOR), CAPA, Training, Assets with QR scan-to-inspect, and dynamic capture forms.', 'Kept production stable with Sentry monitoring & crash triage; one design-token palette matched to the web (WCAG AA), 40 languages, 1,000+ test files in CI.', 'Took the Hub One Flutter app multi-platform — iPhone & Mac App Store builds, macOS & Windows support, responsive UI across phone, tablet & desktop, and Sentry release monitoring.', 'Web: rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager (React, Express, PostgreSQL) an installable PWA with Web Push.', 'Built document management, push notifications & token refresh in the Workplace Safety Flutter app, and Axis UI, a shared Flutter design system.'] },
+    points: ['Built the SDS Manager iOS/Android app from scratch and own it end-to-end — architecture, features, CI/CD releases and production monitoring. Lead a team of 2 Flutter developers through task planning, code reviews and mentoring.', 'Delivered the full inventory product — SSO, offline-first SDS library with Drift sync & search, barcode/QR scanning, stock & kit-lot management, Risk Assessment with AI-suggested hazards, Substitution, QR employee access, user management, permission & subscription gating, in-app updates and analytics.', 'Built most of the EHS module on a multi-package Riverpod / melos architecture — Investigations (5-Why, Fishbone, OSHA/RIDDOR), CAPA, Training, Assets with QR scan-to-inspect, and dynamic capture forms.', 'Kept production stable with Sentry monitoring & crash triage; grew the automated test suite (unit, widget & integration) to 1,000+ test files in CI.', 'Unified theming into a design-token palette matched to the web (WCAG AA) and localized the app into 40 languages.', 'Took the Hub One Flutter app multi-platform — iPhone & Mac App Store builds, macOS & Windows support, responsive UI across phone, tablet & desktop, and Sentry release monitoring.', 'Web: rebuilt 9 EHS product pages on sdsmanager.com (Next.js, Tailwind, 30+ locales) and made the EHS Incident Manager (React, Express, PostgreSQL) an installable PWA with Web Push.', 'Built document management, push notifications & token refresh in the Workplace Safety Flutter app, and Axis UI, a shared Flutter design system.'] },
   { date: 'Jan 2025 — Sep 2025', role: 'Senior Software Engineer', company: 'AlgoSoft Technologies Ltd.', tag: 'Remote',
-    points: ['Owned 3 App Store apps end-to-end — Invoice Matrix (Flutter), Paraphrase AI & Note Genie (React Native) — from requirements through release, backed by Firebase.', 'Integrated in-app purchases & subscriptions across all apps with RevenueCat.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
+    points: ['Owned 3 AI productivity and invoicing apps end-to-end — requirements and architecture through App Store release — backed by Firebase, with RevenueCat in-app purchases & subscriptions.', 'Built Invoice Matrix in Flutter, a PDF invoicing & billing app.', 'Built Paraphrase AI in React Native & TypeScript, an AI rewriting/humanizing app powered by LLM APIs in 185+ languages.', 'Built Note Genie in React Native, an AI note-taker that turns audio, video and text into organized notes.', 'Implemented a custom ad network in client apps with a ReactJS + Supabase admin panel.'] },
   { date: 'Apr 2022 — Dec 2024', role: 'Flutter Developer', company: 'Ostad Ltd.',
-    points: ['Owned the build of 2 ed-tech apps from scratch (Ostad & Quran Shikkha), serving 20,000+ learners.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.'] },
+    points: ['Owned the build of 2 ed-tech apps from scratch (Ostad & Quran Shikkha), serving 20,000+ learners across iOS, Android, macOS, Windows & Linux.', 'Implemented live-streaming classes in the Ostad bootcamp app using GetX.', 'Integrated SSLCommerz payments into Quran Shikkha, a Bengali Quran-learning app.', 'Cut Ostad app load time by 30% via performance optimization.', 'Integrated 5+ analytics tools (Firebase, Mixpanel, Sentry, Mux, Smartlook) → +20% engagement.', 'Built and published video_player_mux to pub.dev — a native Android Flutter plugin (MethodChannel, ExoPlayer + Mux Data).'] },
   { date: 'Apr 2021 — Mar 2022', role: 'Flutter Developer', company: 'TechAByte Solutions',
     points: ['Gathered client requirements and translated Figma designs into pixel-accurate, user-friendly interfaces.', 'Customized 10+ projects and templates to spec, always on deadline.'] },
   { date: 'Sep 2020 — Nov 2020', role: 'Flutter Developer', company: 'DeepSight AI', tag: 'Remote',
@@ -185,6 +176,7 @@ function linkButtons(links) {
   if (links.play) out.push(`<a href="${links.play}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-google-play"></i> Google Play</a>`);
   if (links.web) out.push(`<a href="${links.web}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-solid fa-globe"></i> Web</a>`);
   if (links.windows) out.push(`<a href="${links.windows}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-windows"></i> Windows</a>`);
+  if (links.pub) out.push(`<a href="${links.pub}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-solid fa-cube"></i> pub.dev</a>`);
   if (links.github) out.push(`<a class="primary" href="${links.github}" target="_blank" rel="noopener"><i aria-hidden="true" class="fa-brands fa-github"></i> Source</a>`);
   return out.join('');
 }
