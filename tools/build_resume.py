@@ -36,7 +36,7 @@ PHOTO = "data:image/jpeg;base64," + base64.b64encode(open(PHOTO_FILE, "rb").read
 CSS = """
 @page { size: Letter; margin: 0.4in 0.55in; }
 * { box-sizing: border-box; }
-body { font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 9.5pt; line-height: 1.28; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
+body { font-family: Arial,'Helvetica Neue',Helvetica,sans-serif; font-size: 9.5pt; line-height: 1.25; color: #1b1b1b; margin: 0; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0; font-feature-settings: "liga" 0, "clig" 0; }
 a { color: #1b1b1b; text-decoration: none; }
 h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
 .subtitle { font-size: 12pt; font-weight: 600; color: #333; margin: 1px 0 5px; }
@@ -46,12 +46,12 @@ h1 { font-size: 22pt; margin: 0; letter-spacing: 0.3px; }
 .hdr { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
 .hdr-text { flex: 1 1 auto; }
 .photo { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1.5px solid #9a9a9a; }
-h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 9px 0 4px; }
+h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.1px solid #444; padding-bottom: 2px; margin: 8px 0 3px; }
 p { margin: 2px 0; }
 .summary { margin: 2px 0 0; text-align: justify; }
 .skills div { margin: 1.5px 0; }
 .skills b { color: #111; }
-.job { margin-bottom: 6px; }
+.job { margin-bottom: 5px; }
 .role { font-weight: 700; font-size: 10.5pt; }
 .org { font-weight: 600; color: #222; }
 .when { color: #555; }
@@ -156,6 +156,8 @@ def doc(variant):
         ("Hub One", "Flutter, iOS, macOS, Windows", "Multi-product business app (tasks, sales, support, ledger) for iPhone, iPad &amp; Mac.",
          [("App Store","https://apps.apple.com/us/app/hubone-sds/id6814464975")]),
         ("MaintainOne", "Django, React, TypeScript, PostgreSQL, Celery, Docker", "CMMS built end-to-end for a US client &mdash; work requests and orders, preventive maintenance, asset/location hierarchy, inventory and purchasing, role-based access, and reporting.",
+         []),
+        ("AI Productivity Apps", "Flutter, React Native, TypeScript, LLM APIs, Firebase, RevenueCat", 'Invoice Matrix (<a class="ilink" href="https://apps.apple.com/us/app/invoice-matrix-pdf-invoices/id6742684220">App Store</a>), a PDF invoicing &amp; billing app; Paraphrase AI (<a class="ilink" href="https://apps.apple.com/us/app/paraphrase-ai-smart-humanizer/id6746731727">App Store</a>), an AI rewriter &amp; humanizer in 185+ languages; Note Genie (<a class="ilink" href="https://apps.apple.com/us/app/lecture-note-taker-note-genie/id6748276655">App Store</a>), an AI note-taker for audio, video &amp; text.',
          []),
         ("Ostad", "Flutter, GetX, live streaming", "Multi-platform live-learning bootcamp; 20,000+ learners, 4.7&#9733;.",
          [("App Store","https://apps.apple.com/us/app/ostad-app/id6446163017"),("Google Play","https://play.google.com/store/apps/details?id=com.ostad.app"),("Web","https://ostad.app"),("Windows","https://cutt.ly/Fr3QsjFo")]),
