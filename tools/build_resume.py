@@ -112,8 +112,8 @@ def doc(variant):
     ]
 
     experience = [
-        ("Software Engineer II", sds_line, "Oct 2025 &ndash; Present", [
-            "Built the SDS Manager iOS/Android app (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/sds-manager/id6754279703\">App Store</a> &middot; <a class=\"ilink\" href=\"https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp\">Google Play</a>) from scratch and own it end-to-end &mdash; architecture, features, CI/CD releases to the App Store and Google Play, and production monitoring. Lead a team of 2 Flutter developers through task planning, code reviews, and mentoring.",
+        ("Software Engineer II", sds_line, "Oct 2025 &ndash; Oct 2026", [
+            "Built the SDS Manager iOS/Android app (<a class=\"ilink\" href=\"https://apps.apple.com/us/app/sds-manager/id6754279703\">App Store</a> &middot; <a class=\"ilink\" href=\"https://play.google.com/store/apps/details?id=com.sdsmanager.mainapp\">Google Play</a>) from scratch and owned it end-to-end &mdash; architecture, features, CI/CD releases to the App Store and Google Play, and production monitoring. Led a team of 2 Flutter developers through task planning, code reviews, and mentoring.",
             "Delivered the full inventory product: SSO login, offline-first SDS library with Drift sync and search, barcode/QR scanning, stock and kit-lot management with change logs and CSV export, Risk Assessment with AI-suggested hazards and exposure data, Substitution, QR employee access, user management, subscription and permission gating at web parity, in-app update and review prompts, and analytics with an offline queue.",
             "Built most of the EHS module on a multi-package Riverpod / melos architecture &mdash; Investigations (5-Why, Fishbone, OSHA/RIDDOR compliance), CAPA, Training (courses, quizzes, certificates), Assets with QR scan-to-inspect, and dynamic capture forms with 17 field types.",
             "Kept production stable through Sentry monitoring, crash triage, and defensive JSON parsing across every feature model; grew the automated test suite (unit, widget, and integration tests) to 1,000+ test files running in CI.",
